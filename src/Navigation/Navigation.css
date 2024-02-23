@@ -1,0 +1,38 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px 20px 310px;
+  margin-left: 0 auto;
+  border-bottom: 2px solid #f3f3f3;
+  /* z-index: 999; */
+}
+
+input {
+  width: 15rem;
+  position: relative;
+  padding: 12px 20px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  border-radius: 20px;
+  color: black;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons {
+  font-size: 22px;
+  color: black;
+  transition: 0.3s;
+}
+
+.nav-icons:hover {
+  color: rgb(70, 18, 18);
+}
