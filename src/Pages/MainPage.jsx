@@ -1,7 +1,7 @@
+import Navigation from "../navigation/Navigation";
 import "../index.css";
-import Navigation from "../Navigation/Navigation";
-import Products from "../Products/Products";
-import Recommended from "../Recommended/Recommended";
+import Products from "../products/Products";
+import Recommended from "../recommended/Recommended";
 import Sidebar from "../side-bar/Sidebar";
 
 const MainPage = () => {
