@@ -2,8 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-left: 20rem;
-  margin-top: 2rem;
+  margin: 2rem 0 40px 20rem;
 }
 
 .card {
@@ -14,6 +13,21 @@
   padding: 20px;
   cursor: pointer;
   transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-img-container {
+  width: 8rem;
+  height: 123px;
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
@@ -21,7 +35,7 @@
 }
 
 .card-img {
-  width: 13rem;
+  width: 100%;
   margin-bottom: 1rem;
 }
 

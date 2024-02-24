@@ -1,6 +1,7 @@
 .rec-container {
   display: flex;
   margin-left: 20rem;
+  margin-top: 4rem;
 }
 
 .rec-title {

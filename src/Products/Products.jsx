@@ -5,12 +5,7 @@ import Card from "../components/Card";
 const Products = () => {
   return (
     <section>
-      <div className="card-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <div>
         <Card />
       </div>
     </section>
