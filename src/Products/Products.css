@@ -61,12 +61,16 @@
   align-items: center;
 }
 
-.bag-icon {
+.bag-icon,
+.heart-icon {
   color: #535353;
   transition: 0.3s;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.bag-icon:hover {
+.bag-icon:hover,
+.heart-icon:hover {
   color: #a1a1a1;
 }
 
@@ -74,4 +78,45 @@
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.detailed {
+  position: relative;
+}
+
+.detailed .card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  gap: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 51;
+  cursor: default;
+}
+
+.detailed .card .icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.detailed .card .icon:hover {
+  filter: brightness(0.8);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.474);
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  cursor: pointer;
 }

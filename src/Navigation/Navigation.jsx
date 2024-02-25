@@ -6,11 +6,12 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = () => {
+const Navigation = ({ handleInputChange }) => {
   return (
     <nav>
       <div className="nav-container">
         <input
+          onChange={handleInputChange}
           type="text"
           className="search-input"
           placeholder="Enter your search shoes"

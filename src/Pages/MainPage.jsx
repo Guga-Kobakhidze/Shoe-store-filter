@@ -17,8 +17,8 @@ const MainPage = () => {
     setQuery(e.target.value);
   };
 
-  const filteredItems = products.filter((product) =>
-    product.title.toLowerCase().indexOf(query.toLowerCase() !== -1)
+  const filteredItems = products.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 
   // Radio Filter
@@ -72,7 +72,7 @@ const MainPage = () => {
   return (
     <div className="main-container">
       <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Navigation handleInputChange={handleInputChange} />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </div>

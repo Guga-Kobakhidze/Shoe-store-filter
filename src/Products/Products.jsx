@@ -1,9 +1,11 @@
+import "./Products.css";
 import React, { useState } from "react";
 import Pagination from "@mui/material/pagination";
-import "./Products.css";
+import Detailed from "../components/Card";
 
 const Products = ({ result }) => {
   const [page, setPage] = useState(1);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const itemsPerPage = 12;
 
   const startIndex = (page - 1) * itemsPerPage;
@@ -12,13 +14,20 @@ const Products = ({ result }) => {
 
   const handlePageChange = (event, newPage) => {
     setPage(newPage);
+    setSelectedProduct(null);
+  };
+
+  const handleProductClick = (productId) => {
+    setSelectedProduct(productId);
   };
 
   return (
     <section>
       <div className="card-container">
         {currentPageItems.map((item) => (
-          <div key={item.id}>{item}</div>
+          <div key={item.key} onClick={() => handleProductClick(item.key)}>
+            {item}
+          </div>
         ))}
       </div>
       <Pagination
@@ -28,6 +37,32 @@ const Products = ({ result }) => {
         onChange={handlePageChange}
         color="primary"
       />
+      {selectedProduct && (
+        <>
+          {result.map((product) => {
+            if (product.key === selectedProduct) {
+              return (
+                <div className="detailed" key={product.key}>
+                  <Detailed
+                    id={product.key}
+                    img={product.props.img}
+                    title={product.props.title}
+                    newPrice={product.props.newPrice}
+                    prevPrice={product.props.prevPrice}
+                    reviews={product.props.reviews}
+                    selectedProduct={selectedProduct}
+                    setSelectedProduct={setSelectedProduct}
+                  />
+                </div>
+              );
+            }
+            return null;
+          })}
+        </>
+      )}{" "}
+      {selectedProduct && (
+        <div className="overlay" onClick={() => setSelectedProduct(null)}></div>
+      )}
     </section>
   );
 };
