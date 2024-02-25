@@ -5,7 +5,7 @@ import Category from "./Category/Category";
 import Colors from "./Colors/Colors";
 import Price from "./Price/Price";
 
-const Sidebar = () => {
+const Sidebar = ({ handleChange }) => {
   return (
     <div>
       <div className="sidebar">
@@ -14,9 +14,9 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCartShopping} />
           </h1>
 
-          <Category />
-          <Price />
-          <Colors />
+          <Category handleChange={handleChange} />
+          <Price handleChange={handleChange} />
+          <Colors handleChange={handleChange} />
         </div>
       </div>
     </div>
