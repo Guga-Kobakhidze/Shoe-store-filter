@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 20px;
   margin: 2rem 0 40px 20rem;
+  min-height: 80vh;
 }
 
 .card {
@@ -67,4 +68,10 @@
 
 .bag-icon:hover {
   color: #a1a1a1;
+}
+
+.Pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
